@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import "./App.css";
 import { toUnicode } from "punycode";
 import TodoList from "./todo/TodoList";
@@ -11,7 +11,7 @@ function App() {
   const [todoState, setTodoState] = useState<Todo[]>(initialTodos);
   const [showError, setShowError] = useState<string>("");
 
-  function handleFinishTodo(id: number): void {
+  const handleFinishTodo = useCallback((id: number): void => {
     // find the todo in the array
     let index = -1;
     for (let i = 0; i < todoState.length; i++) {
@@ -31,10 +31,10 @@ function App() {
       next[index] = { ...next[index], finished: !next[index].finished };
       return next;
     });
-  }
+  }, todoState);
   return (
     <div>
-      {showError === "" ? <p>{showError}</p> : <p></p>}
+      {showError === "" ? <p>{showError}</p> : null}
 
       <h1>Todo List</h1>
       <TodoAddBar setTodoState={setTodoState} />

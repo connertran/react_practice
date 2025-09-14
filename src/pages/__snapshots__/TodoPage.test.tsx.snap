@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo Page matches the previous snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <p />
+    <h1>
+      Todo List
+    </h1>
+    <form>
+      <input
+        placeholder="Add your todo"
+        type="text"
+        value=""
+      />
+      <button>
+        Add
+      </button>
+    </form>
+    <ul
+      class="todo-list"
+    >
+      <li>
+        <label>
+          Create a Todo React app
+        </label>
+        <input
+          type="checkbox"
+        />
+        <button>
+          X
+        </button>
+      </li>
+      <li>
+        <label>
+          Exercise
+        </label>
+        <input
+          checked=""
+          type="checkbox"
+        />
+        <button>
+          X
+        </button>
+      </li>
+      <li>
+        <label>
+          Interview
+        </label>
+        <input
+          checked=""
+          type="checkbox"
+        />
+        <button>
+          X
+        </button>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
